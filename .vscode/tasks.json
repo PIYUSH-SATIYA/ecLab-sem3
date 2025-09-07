@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Verilog Simulation",
+            "type": "shell",
+            "command": "iverilog -o simv design.v testbench.v && vvp simv",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open GTKWave",
+            "type": "shell",
+            "command": "gtkwave dump.vcd",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Lightwave",
+            "type": "shell",
+            "command": "lightwave dump.vcd",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)" "(v12_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x562cce536a10 .scope module, "tb_xorFromNor" "tb_xorFromNor" 2 19;
+ .timescale 0 0;
+v0x562cce54b0a0_0 .var "A", 0 0;
+v0x562cce54b140_0 .var "B", 0 0;
+v0x562cce54b210_0 .net "Y", 0 0, L_0x562cce54b6e0;  1 drivers
+S_0x562cce536ba0 .scope module, "uut" "xorFromNor" 2 24, 2 1 0, S_0x562cce536a10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_0x562cce54b310 .functor NOR 1, v0x562cce54b0a0_0, v0x562cce54b0a0_0, C4<0>, C4<0>;
+L_0x562cce54b400 .functor NOR 1, v0x562cce54b140_0, v0x562cce54b140_0, C4<0>, C4<0>;
+L_0x562cce54b4c0 .functor NOR 1, v0x562cce54b0a0_0, L_0x562cce54b400, C4<0>, C4<0>;
+L_0x562cce54b530 .functor NOR 1, L_0x562cce54b310, v0x562cce54b140_0, C4<0>, C4<0>;
+L_0x562cce54b620 .functor NOR 1, L_0x562cce54b4c0, L_0x562cce54b530, C4<0>, C4<0>;
+L_0x562cce54b6e0 .functor NOR 1, L_0x562cce54b620, L_0x562cce54b620, C4<0>, C4<0>;
+v0x562cce5256b0_0 .net "a", 0 0, v0x562cce54b0a0_0;  1 drivers
+v0x562cce54aab0_0 .net "b", 0 0, v0x562cce54b140_0;  1 drivers
+v0x562cce54ab70_0 .net "nA", 0 0, L_0x562cce54b310;  1 drivers
+v0x562cce54ac10_0 .net "nB", 0 0, L_0x562cce54b400;  1 drivers
+v0x562cce54acd0_0 .net "t1", 0 0, L_0x562cce54b4c0;  1 drivers
+v0x562cce54ade0_0 .net "t2", 0 0, L_0x562cce54b530;  1 drivers
+v0x562cce54aea0_0 .net "t3", 0 0, L_0x562cce54b620;  1 drivers
+v0x562cce54af60_0 .net "y", 0 0, L_0x562cce54b6e0;  alias, 1 drivers
+    .scope S_0x562cce536a10;
+T_0 ;
+    %vpi_call 2 27 "$dumpfile", "xor from nor.vcd" {0 0 0};
+    %vpi_call 2 28 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x562cce536a10 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x562cce536a10;
+T_1 ;
+    %vpi_call 2 32 "$display", "A B | Y" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562cce54b0a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562cce54b140_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 33 "$display", "%b %b | %b", v0x562cce54b0a0_0, v0x562cce54b140_0, v0x562cce54b210_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562cce54b0a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562cce54b140_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 34 "$display", "%b %b | %b", v0x562cce54b0a0_0, v0x562cce54b140_0, v0x562cce54b210_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562cce54b0a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x562cce54b140_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 35 "$display", "%b %b | %b", v0x562cce54b0a0_0, v0x562cce54b140_0, v0x562cce54b210_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562cce54b0a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x562cce54b140_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 36 "$display", "%b %b | %b", v0x562cce54b0a0_0, v0x562cce54b140_0, v0x562cce54b210_0 {0 0 0};
+    %vpi_call 2 37 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Lab2/xor from nor.v";
