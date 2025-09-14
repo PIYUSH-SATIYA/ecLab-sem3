@@ -1,5 +1,5 @@
 temp/
 
 # Ignore .vvp and .vcd files
-.vvp
-.vcd
+*.vvp
+*.vcd
