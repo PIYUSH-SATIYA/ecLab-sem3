@@ -26,7 +26,7 @@ module tb_half_adder_nand;
     );
 
     initial begin
-        $dumpfile("HalfAdderFromNand.vcd");
+        $dumpfile("halfAdderFromNand.vcd");
         $dumpvars(0, tb_half_adder_nand);
         $display("A B | Sum Carry");
 

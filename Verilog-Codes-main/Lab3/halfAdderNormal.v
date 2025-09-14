@@ -20,7 +20,7 @@ module tb_half_adder;
     );
 
     initial begin
-        $dumpfile("HalfAdder.vcd");
+        $dumpfile("HalfAdderNormal.vcd");
         $dumpvars(0, tb_half_adder);
         $display("A B | Sum Carry");
 

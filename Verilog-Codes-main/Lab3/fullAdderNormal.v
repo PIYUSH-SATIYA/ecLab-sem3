@@ -22,7 +22,7 @@ module tb_full_adder;
     );
 
     initial begin
-        $dumpfile("FullAdder.vcd");
+        $dumpfile("fullAdderNormal.vcd");
         $dumpvars(0, tb_full_adder);
         $display("A B Cin | Sum Cout");
         
