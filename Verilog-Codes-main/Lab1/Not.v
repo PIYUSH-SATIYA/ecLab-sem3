@@ -3,7 +3,7 @@ module notGate(
     output y
 );
 
-not(y,a);
+assign y = !a;
 
 endmodule
 

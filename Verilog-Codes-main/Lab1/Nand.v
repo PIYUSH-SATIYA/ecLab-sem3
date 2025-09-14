@@ -4,7 +4,7 @@ module nandGate (
     output y
 );
 
-    nand (y, a, b);
+    assign y = !(a&b);
 
 endmodule
 

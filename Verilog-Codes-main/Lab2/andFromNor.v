@@ -14,7 +14,7 @@ module andFromNor(
 endmodule
 
 
-module tb_andFromNor;
+module tbAndFromNor;
 
     reg A, B;
     wire Y;
@@ -22,8 +22,8 @@ module tb_andFromNor;
     andFromNor uut (.a(A), .b(B), .y(Y));
 
     initial begin
-        $dumpfile("and from nor.vcd"); // name of the dump file
-        $dumpvars(0, tb_andFromNor); // dump all vars from this module
+        $dumpfile("andFromNor.vcd"); // name of the dump file
+        $dumpvars(0, tbAndFromNor); // dump all vars from this module
     end
 
     initial begin

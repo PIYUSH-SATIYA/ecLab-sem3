@@ -3,7 +3,8 @@ module orGate(
     input b,
     output y
 );
-    or (y ,a , b);
+    // or (y ,a , b);
+    assign y = (a|b);
 
 endmodule
 

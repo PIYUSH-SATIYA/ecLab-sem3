@@ -3,7 +3,7 @@ module norGate(
     input b,
     output y
 );
-    nor (y ,a , b);
+    assign y = !(a|b);
 
 endmodule
 
