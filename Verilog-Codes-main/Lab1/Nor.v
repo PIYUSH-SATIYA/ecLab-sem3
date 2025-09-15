@@ -14,8 +14,8 @@ module tbNorGate;
    norGate uut (.a(A), .b(B), .y(Y));
 
    initial begin
-    $dumpfile("Nor.vcd"); // name of the dump file
-    $dumpvars(0, tbNorGate); // dump all vars from this module
+    $dumpfile("Nor.vcd"); // 
+    $dumpvars(0, tbNorGate); 
    end
 
    initial begin
